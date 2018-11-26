@@ -1,7 +1,11 @@
 # XML
 
 XML stands for eXtensible Markup Language
+
+
 XML is a markup language much like HTML
+
+
 XML was designed to store and transport data
 Used in API testing
 
