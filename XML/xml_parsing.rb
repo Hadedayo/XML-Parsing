@@ -12,9 +12,9 @@ class GuiseppesMenu
     @menu.search('name')
   end
 
-  # def get_menu_items
-  #   @menu.search('food')
-  # end
+  def get_menu_items
+    @menu.search('food')
+  end
 end
 
 guiseppes = GuiseppesMenu.new
