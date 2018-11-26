@@ -7,7 +7,10 @@ describe "XML menu" do
   end
 
   it "no price should be more than £10" do
-    pending
+    @xml_menu.split_£FromPrice.each do |price|
+      expect(price).to be > 0
+      expect(price).to be <= 10
+    end
   end
 
   it "should have no item with calories over 1000 except for the full breakfast" do
