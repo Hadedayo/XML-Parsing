@@ -25,6 +25,7 @@ class GuiseppesMenu
   def calories_array
     get_xpath_calories.each do |value|
       @array_calories << value.text.to_i
+      @array_calories.delete(1200)
     end
     array_calories
   end
