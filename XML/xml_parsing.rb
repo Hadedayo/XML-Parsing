@@ -20,6 +20,9 @@ class GuiseppesMenu
     @menu.xpath('/breakfast_menu/food/calories')
   end
 
+  def get_xpath_names
+    @menu.xpath('//name')
+  end
 
 
 
@@ -37,3 +40,4 @@ guiseppes = GuiseppesMenu.new
 # puts guiseppes.get_menu_names.length
 # puts guiseppes.get_menu_names.last.text
 puts guiseppes.get_xpath_calories
+puts guiseppes.get_xpath_names
