@@ -25,19 +25,15 @@ class GuiseppesMenu
   end
 
 
-
-
-
-
 end
 
 guiseppes = GuiseppesMenu.new
-# p guiseppes.menu
-# puts guiseppes.get_menu_names.last
-#
-# puts guiseppes.get_menu_names.last
-# puts guiseppes.get_menu_names
-# puts guiseppes.get_menu_names.length
-# puts guiseppes.get_menu_names.last.text
-puts guiseppes.get_xpath_calories
-puts guiseppes.get_xpath_names
+# # p guiseppes.menu
+# # puts guiseppes.get_menu_names.last
+# #
+# # puts guiseppes.get_menu_names.last
+# # puts guiseppes.get_menu_names
+# # puts guiseppes.get_menu_names.length
+# # puts guiseppes.get_menu_names.last.text
+# puts guiseppes.get_xpath_calories
+# puts guiseppes.get_xpath_names
