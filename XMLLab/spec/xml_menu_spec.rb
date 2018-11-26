@@ -8,8 +8,8 @@ describe "XML menu" do
 
   it "no price should be more than £10" do
     @xml_menu.removePoundFromPrice.each do |price|
-      expect(price).to be > 0
-      expect(price).to be <= 10
+      expect(price.to_i).to be > 0
+      expect(price.to_i).to be <= 10
     end
   end
 
