@@ -20,6 +20,16 @@ class GuiseppesMenu
     @menu.xpath('/breakfast_menu/food/calories')
   end
 
+  def calories_array
+    array_for_calories = []
+    array_for_calories << get_xpath_calories[0].text.to_i
+    array_for_calories <<  get_xpath_calories[1].text.to_i
+    array_for_calories << get_xpath_calories[2].text.to_i
+    array_for_calories <<  get_xpath_calories[3].text.to_i
+    array_for_calories <<  get_xpath_calories[4].text.to_i
+    array_for_calories
+  end
+
 
 
 
@@ -29,6 +39,7 @@ guiseppes = GuiseppesMenu.new
 # puts guiseppes.get_menu_price
 # print guiseppes.removePoundFromPrice
 # puts guiseppes.removePoundFromPrice
-puts guiseppes.get_xpath_calories
-puts guiseppes.get_xpath_calories[0].text.to_i
-puts guiseppes.get_xpath_calories[3].text.to_i
+# puts guiseppes.get_xpath_calories
+# puts guiseppes.get_xpath_calories[0].text.to_i
+# puts guiseppes.get_xpath_calories[3].text.to_i
+print guiseppes.calories_array
