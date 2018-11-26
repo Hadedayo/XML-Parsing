@@ -7,7 +7,7 @@ describe "XML menu" do
   end
 
   it "no price should be more than £10" do
-    @xml_menu.split_£FromPrice.each do |price|
+    @xml_menu.removePoundFromPrice.each do |price|
       expect(price).to be > 0
       expect(price).to be <= 10
     end
