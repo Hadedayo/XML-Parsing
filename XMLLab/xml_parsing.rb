@@ -22,7 +22,6 @@ class GuiseppesMenu
     @menu.xpath('/breakfast_menu/food/calories')
   end
 
-
   def calories_array
     get_xpath_calories.each do |value|
       @array_calories << value.text.to_i
@@ -43,3 +42,4 @@ guiseppes = GuiseppesMenu.new
 # puts guiseppes.get_xpath_calories[0].text.to_i
 # puts guiseppes.get_xpath_calories[3].text.to_i
 print guiseppes.calories_array
+# puts guiseppes.check_calories_above_1000
