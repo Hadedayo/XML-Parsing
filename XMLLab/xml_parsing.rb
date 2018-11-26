@@ -2,10 +2,12 @@ require 'nokogiri'
 
 class GuiseppesMenu
 
-  attr_accessor :menu
+  attr_accessor :menu, :array_calories
 
   def initialize
     @menu = Nokogiri::XML(File.open('./xml_menu.xml'))
+    @calories = @menu.search('calories')
+    @array_calories = []
   end
 
   def get_menu_price
@@ -20,14 +22,12 @@ class GuiseppesMenu
     @menu.xpath('/breakfast_menu/food/calories')
   end
 
+
   def calories_array
-    array_for_calories = []
-    array_for_calories << get_xpath_calories[0].text.to_i
-    array_for_calories <<  get_xpath_calories[1].text.to_i
-    array_for_calories << get_xpath_calories[2].text.to_i
-    array_for_calories <<  get_xpath_calories[3].text.to_i
-    array_for_calories <<  get_xpath_calories[4].text.to_i
-    array_for_calories
+    get_xpath_calories.each do |value|
+      @array_calories << value.text.to_i
+    end
+    array_calories
   end
 
 
