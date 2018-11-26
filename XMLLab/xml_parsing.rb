@@ -12,7 +12,7 @@ class GuiseppesMenu
     @menu.search('price').text
   end
 
-  def split_£FromPrice
+  def removePoundFromPrice
     get_menu_price.split('£')
   end
 
@@ -21,4 +21,4 @@ end
 
 guiseppes = GuiseppesMenu.new
 puts guiseppes.get_menu_price
-puts guiseppes.split_£FromPrice
+puts guiseppes.removePoundFromPrice
