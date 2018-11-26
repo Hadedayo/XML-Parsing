@@ -31,7 +31,28 @@ class GuiseppesMenu
     array_calories
   end
 
+  def get_xpath_food_description
+    @menu.xpath('////description')
+  end
 
+  def search_description
+    array_description = []
+    get_xpath_food_description.each do |v|
+      array_description << v.text
+    end
+    array_description
+  end
+
+  def waffles
+    array_waffles = []
+    search_description.each do |w|
+      if w.include?"waffles"
+        array_waffles << w
+      end
+      array_waffles
+    end
+    array_waffles
+  end
 
 
 end
@@ -43,5 +64,6 @@ guiseppes = GuiseppesMenu.new
 # puts guiseppes.get_xpath_calories
 # puts guiseppes.get_xpath_calories[0].text.to_i
 # puts guiseppes.get_xpath_calories[3].text.to_i
-print guiseppes.calories_array
-# puts guiseppes.check_calories_above_1000
+# print guiseppes.calories_array
+# print guiseppes.search_description
+puts guiseppes.waffles
