@@ -9,7 +9,16 @@ class GuiseppesMenu
   end
 
   def get_menu_price
-    @menu.search('price')
+    @menu.search('price').text
   end
 
+  def split_£FromPrice
+    get_menu_price.split('£')
+  end
+
+
 end
+
+guiseppes = GuiseppesMenu.new
+puts guiseppes.get_menu_price
+puts guiseppes.split_£FromPrice
