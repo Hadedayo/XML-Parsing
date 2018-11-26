@@ -2,12 +2,13 @@ require 'nokogiri'
 
 class GuiseppesMenu
 
-  attr_accessor :menu, :array_calories
+  attr_accessor :menu, :array_calories, :greater_than_1000calories_array
 
   def initialize
     @menu = Nokogiri::XML(File.open('./xml_menu.xml'))
     @calories = @menu.search('calories')
     @array_calories = []
+    @greater_than_1000calories_array = []
   end
 
   def get_menu_price
