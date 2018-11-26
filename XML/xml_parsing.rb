@@ -12,9 +12,16 @@ class GuiseppesMenu
     @menu.search('name')
   end
 
-
+  # def get_menu_items
+  #   @menu.search('food')
+  # end
 end
 
 guiseppes = GuiseppesMenu.new
-p guiseppes.menu
+# p guiseppes.menu
+puts guiseppes.get_menu_names.last
+
+puts guiseppes.get_menu_names.last
 puts guiseppes.get_menu_names
+puts guiseppes.get_menu_names.length
+puts guiseppes.get_menu_names.last.text
